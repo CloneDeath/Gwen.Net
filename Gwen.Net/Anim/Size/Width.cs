@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Gwen.Net.Anim.Size
+﻿namespace Gwen.Net.Anim.Size
 {
     class Width : TimedAnimation
     {

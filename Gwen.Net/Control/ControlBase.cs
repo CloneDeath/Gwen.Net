@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using Gwen.Net.Anim;
 using Gwen.Net.DragDrop;
@@ -25,7 +24,7 @@ namespace Gwen.Net.Control
         private ControlBase m_Parent;
 
         /// <summary>
-        /// This is the panel's actual parent - most likely the logical 
+        /// This is the panel's actual parent - most likely the logical
         /// parent's InnerPanel (if it has one). You should rarely need this.
         /// </summary>
         private ControlBase m_ActualParent;
@@ -1185,7 +1184,7 @@ namespace Gwen.Net.Control
         /// <param name="skin">Skin to use.</param>
         internal virtual void DoRender(Skin.SkinBase skin)
         {
-            // If this control has a different skin, 
+            // If this control has a different skin,
             // then so does its children.
             if (m_Skin != null)
                 skin = m_Skin;

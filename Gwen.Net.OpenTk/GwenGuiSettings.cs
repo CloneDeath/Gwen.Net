@@ -4,7 +4,7 @@ namespace Gwen.Net.OpenTk
 {
     public class GwenGuiSettings
     {
-        public static readonly GwenGuiSettings Default = new GwenGuiSettings
+        public static readonly GwenGuiSettings Default = new()
         {
             DefaultFont = "Calibri",
             Renderer = GwenGuiRenderer.GL40,
@@ -12,9 +12,9 @@ namespace Gwen.Net.OpenTk
         };
 
         //Make this a source or stream?
-        public FileInfo SkinFile { get; set; }
+        public FileInfo? SkinFile { get; set; }
 
-        public string DefaultFont { get; set; }
+        public string? DefaultFont { get; set; }
 
         public GwenGuiRenderer Renderer { get; set; }
 

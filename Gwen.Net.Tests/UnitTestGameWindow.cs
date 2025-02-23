@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Linq;
 using Collections.Generic;
-using Gwen.Net.Control;
 using Gwen.Net.OpenTk;
-using Gwen.Net.OpenTk.Input;
-using Gwen.Net.OpenTk.Platform;
-using Gwen.Net.Skin;
 using Gwen.Net.Tests.Components;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
-using OpenTK.Windowing.Common.Input;
 using OpenTK.Windowing.Desktop;
-using OpenTK.Windowing.GraphicsLibraryFramework;
 
 namespace Gwen.Net.Tests
 {

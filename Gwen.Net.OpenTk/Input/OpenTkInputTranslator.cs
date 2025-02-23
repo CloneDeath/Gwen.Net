@@ -3,7 +3,6 @@ using Gwen.Net.Control;
 using Gwen.Net.Input;
 using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
-using OpenTK.Windowing.Common.Input;
 using OpenTK.Windowing.GraphicsLibraryFramework;
 using Key = OpenTK.Windowing.GraphicsLibraryFramework.Keys;
 
@@ -14,7 +13,7 @@ namespace Gwen.Net.OpenTk.Input
         private readonly Canvas canvas;
         private Vector2 lastMousePosition;
 
-        bool controlPressed = false;
+        bool controlPressed;
 
         public OpenTkInputTranslator(Canvas canvas)
         {
@@ -65,9 +64,6 @@ namespace Gwen.Net.OpenTk.Input
 
         public void ProcessMouseButton(MouseButtonEventArgs args)
         {
-            if (canvas is null)
-                return;
-
             if (args.Button == MouseButton.Left)
                 canvas.Input_MouseButton(0, args.IsPressed);
             else if (args.Button == MouseButton.Right)
@@ -76,9 +72,6 @@ namespace Gwen.Net.OpenTk.Input
 
         public void ProcessMouseMove(MouseMoveEventArgs args)
         {
-            if (null == canvas)
-                return;
-
             var deltaPosition = args.Position - lastMousePosition;
             lastMousePosition = args.Position;
 
@@ -87,9 +80,6 @@ namespace Gwen.Net.OpenTk.Input
 
         public void ProcessMouseWheel(MouseWheelEventArgs args)
         {
-            if (null == canvas)
-                return;
-
             canvas.Input_MouseWheel((int)(args.OffsetY * 60));
         }
 

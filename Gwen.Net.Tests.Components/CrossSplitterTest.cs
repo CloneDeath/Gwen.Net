@@ -1,5 +1,4 @@
 ﻿using System;
-using Gwen.Net;
 using Gwen.Net.Control;
 
 namespace Gwen.Net.Tests.Components
@@ -122,7 +121,7 @@ namespace Gwen.Net.Tests.Components
 #if false
 		protected override void Layout(Skin.Base skin)
         {
-            
+
         }
 #endif
     }
